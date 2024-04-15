@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 cron: 1 0 0 * * *
-new Env('ICC2022');
+new Env('HIFINI');
 """
 
 import json
