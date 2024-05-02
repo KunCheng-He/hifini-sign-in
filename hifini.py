@@ -62,10 +62,13 @@ def start(cookie):
                 msg += "签到失败！\n提示“操作存在风险”，不再二次尝试。\n可能cookie失效或配置错误，请重新配置cookie\n若cookie已经正确配置，请联系管理员调试脚本，并停止使用，防止网站对账号进行封控"
                 success = True
             elif "成功签到！" in rsp_text:
-                result = re.search(r"成功签到！今日排名(\d+)，总奖励(\d+)金币！", rsp_text)
-                rank = result.group(1)
-                reward = result.group(2)
-                msg += f"签到成功！\n今日排名{rank}，奖励{reward}金币！"
+                result = re.search(r"成功签到！今日排名(\d+)，.*?总奖励(\d+)金币", rsp_text)
+                if result:
+                    rank = result.group(1)
+                    reward = result.group(2)
+                    msg += f"签到成功！\n今日排名{rank}，奖励{reward}金币！"
+                else:
+                    msg += "签到成功！\n但解析失败，今日排名与奖励未知，请更正正则表达式"
                 success = True
             elif "503 Service Temporarily" in rsp_text or "502 Bad Gateway" in rsp_text:
                 msg += "服务器异常！"
