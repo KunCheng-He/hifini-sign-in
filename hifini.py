@@ -94,6 +94,7 @@ def start(cookie):
             # sign 参数获取失败是因为没有登录，该情况不再重试
             if "group" in str(e):
                 print("HIFINI 签到结果", str(e) + "\n请正确配置 cookie !!!")
+                send("HIFINI 签到结果", str(e))
                 break
             
             send("HIFINI 签到结果", str(e))
