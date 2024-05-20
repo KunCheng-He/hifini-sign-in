@@ -34,5 +34,5 @@ ql repo https://github.com/KunCheng-He/hifini-sign-in.git "hifini.py" "" ""
 
 ### 致谢
 
-- 源代码参考[fengwenhua/hifini_sign_in](https://github.com/fengwenhua/hifini_sign_in)，仓库很久没更新了，就重新写了一个以解决人机验证的问题
+- 源代码参考[fengwenhua/hifini_sign_in](https://github.com/fengwenhua/hifini_sign_in)，感谢
 - 技术支持者[Xie Zhongtao](https://github.com/francisol)，感谢🫶
