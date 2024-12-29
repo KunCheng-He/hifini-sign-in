@@ -38,9 +38,10 @@ def start(cookie):
 
         # 通知
         msg += rsp_text
+        print("HIFINI 签到结果\n" + msg)
         send("HIFINI 签到结果", msg)
     except Exception as e:
-        print("签到失败，失败原因:"+str(e))
+        print("签到失败，失败原因:" + str(e))
         send("HIFINI 签到结果", str(e))
 
 
